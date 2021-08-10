@@ -4,7 +4,8 @@ function UseStateErrorEx() {
     let title ="random title";
     const handleClick = () => {
         console.log(title);
-       //title = "My name is Obama";
+        
+       title = "My name is Obama";
     }
     return ( <React.Fragment>
         <h2>{title}</h2>
