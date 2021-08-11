@@ -10,7 +10,7 @@ function Forms() {
         if(firstName && email) {
             console.log('submit the value');    
             const person = {firstName:firstName, email:email};
-        //console.log(person);
+        console.log(person);
         setPeople((people) => {
             return  [...people, person];
         });
