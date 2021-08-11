@@ -4,7 +4,12 @@ import React, {useState} from 'react'
 function UseStateBasic() {
     const [day,setDay]=useState("Today is a rainy day :");
     const handleClick = () => {
-        setDay("Tpday is a bright day!!")
+        if(day ==="Today is a rainy day :"){
+            setDay("Today is a bright day!!") 
+        }
+    else {
+        setDay("Today is a rainy day !!") 
+    }
     };
     return (
         <div>
