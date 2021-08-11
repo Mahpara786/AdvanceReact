@@ -5,8 +5,11 @@ function UseEffectBasic() {
     const [value, setValue]=useState(0);
     useEffect(() => {
         console.log('call useEffect');
-        document.title = `New Messages(${value})` ;
-    });
+        if(value>=1) {
+        
+            document.title=`new Message(${value})`;
+        }
+    },[value]);
     console.log('render componenet')
     return (
         <>
