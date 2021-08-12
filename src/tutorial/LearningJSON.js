@@ -19,6 +19,12 @@ function LearningJSON() {
         console.log(c);
 
     }
+    const getUser = () => 
+    {
+        axios.get("http://localhost:4000/users").then(users => {
+            console.log(users);
+        })
+    }
    
     return (
         <>
@@ -26,9 +32,9 @@ function LearningJSON() {
           <button type="button" className="btn" onClick={handleClick}>
               post Users
           </button>
-          {/* <button type="button" className="btn" onClick={getUser}>
+          <button type="button" className="btn" onClick={getUser}>
               get Users
-          </button> */}
+          </button>
         </>
     )
 }
