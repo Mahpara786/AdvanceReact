@@ -7,16 +7,15 @@ function LearningJSON() {
             name: "Tony" },{
                 headers: {
                     ['content-type']: 'application/json'
-                }
-            }
-        )
+                }}
+                 )
         promise.then(response => {
             console.log(response)
         })
         promise.catch(error => {
             console.error(error);
         })
-        let c=b;
+        let c = b;
         console.log(c);
 
     }
