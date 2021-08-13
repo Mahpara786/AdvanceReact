@@ -7,13 +7,13 @@ function NavBar() {
         <h1>WelCome</h1>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/" className='item' >Home</Link>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <Link to="/about" className='item' >About</Link>
                 </li>
                 <li>
-                    <Link to="/people">People</Link>
+                    <Link to="/people" className='item'>People</Link>
                 </li>
             </ul>
         </nav>
