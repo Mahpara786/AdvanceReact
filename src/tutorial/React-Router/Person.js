@@ -12,6 +12,7 @@ function Person() {
       setName(newPerson.name)
    },[])
    
+   
    return (
         <>
         <div>

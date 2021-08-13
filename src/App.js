@@ -1,12 +1,11 @@
 
 import React from 'react'
-import Index from './tutorial/Reducer/Index';
+import PropDrilling from './tutorial/PropDrilling';
 
 
 function App() {
   return ( <div className = 'container'>
-    <h2>Advance React js</h2>
-        <Index />
+        <PropDrilling />
     </div>
   );
 }
