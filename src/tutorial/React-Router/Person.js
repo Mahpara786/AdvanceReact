@@ -1,26 +1,26 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
  import {data} from "../data";
  import People from './People';
+ import  { Link, useParams } from "react-router-dom";
 
 function Person() {
-    const [people,setPeople] = useState(data);
-    return (
+    console.log(useParams());
+   const [name, setName]=useState("Default State")
+   const {id} = useParams();
+   useEffect(() => {
+      const newPerson= data.find((person) => person.id === parseInt(id));
+      setName(newPerson.name)
+   },[])
+   
+   return (
+        <>
         <div>
-           <h1>Details of the users</h1> 
-           <div>
-           {people.map((person) => {
-               return (
-                   <div key={person.id} className="item">
-                   <h4>{person.id}</h4>
-                   <h4>{person.name}</h4>
-                   <h4>{person.age}</h4>
-                   
-
-                   </div>
-               );
-           })}
+           <h1>{name}</h1>
+           <Link to="/people" className="btn">
+               Back to People
+           </Link>
         </div>
-        </div>
+        </>
     )
 }
 
